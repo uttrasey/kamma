@@ -1,0 +1,40 @@
+{
+  "name": "kamma",
+  "version": "1.0.0",
+  "description": "kamma code test",
+  "author": "Matt Uttridge <uttrasey@gmail.com>",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --minify-css true --minify-js true --input-dir site --output-dir docs",
+    "deploy": "AWS_PROFILE=kamma sls deploy",
+    "test": "AWS_PROFILE=kamma sls invoke local --function share --path ./example.json",
+    "destroy": "AWS_PROFILE=kamma sls remove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uttrasey/kamma.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uttrasey/kamma/issues"
+  },
+  "homepage": "https://github.com/uttrasey/kamma#readme",
+  "dependencies": {
+    "mailgun-js": "^0.22.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "husky": "^4.2.1",
+    "serverless": "^1.63.0",
+    "serverless-iam-roles-per-function": "^2.0.2",
+    "serverless-pseudo-parameters": "^2.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run-script build"
+    }
+  }
+}

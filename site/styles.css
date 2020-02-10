@@ -1,0 +1,53 @@
+#container {
+    margin: 20px 60px;
+}
+body {
+    margin: 0;
+background: repeating-linear-gradient(
+    135deg,
+    #fff,
+    #eee 5px,
+    #fff 5px,
+    #fff 6px
+    );
+}
+header {
+    text-align: right;
+    margin: 30px 0;
+}
+main {
+    padding: 10px 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+footer {
+    text-align: center;
+}
+footer a {
+    color: #000;
+}
+h1 {
+    margin: 0;
+}
+.sub {
+    width: 65%;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: justify;
+}
+.svg-logo {
+    width: 160px;
+}
+.red {
+    color: red;
+}
+#work {
+    margin-top: 60px;
+    text-align: right;
+}
+a.clean {
+    text-decoration: none;
+    color: #000;
+}
