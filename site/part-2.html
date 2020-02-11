@@ -11,6 +11,16 @@
                 width: 450px;
                 margin: 0 auto;
             }
+            label {
+                font-weight: bold;
+                display: inline-block;
+                width: 140px;
+                text-align: right;
+                padding-right: 20px;
+            }
+            .formSection {
+                margin-bottom: 10px;
+            }
         </style>
         <script type="text/javascript">
             const formToJSON = elements => [].reduce.call(elements, (data, element) => {
@@ -62,18 +72,24 @@
             
             <main>
                 <h3>Share to a friend</h3>
-                <p>Share this great deal with friends!</p>
+                <p class="light">Share this great deal with friends!</p>
                 <form onsubmit="return submitShare()" class="share-form">
-                    <label for="yourName">Your name *</label>
-                    <input id="yourName" name="yourName" type="text" size="20" />
-
-                    <label for="theirName">Friends name *</label>
-                    <input id="theirName" name="theirName" type="text" size="20" />
-
-                    <label for="theirEmail">Friends email *</label>
-                    <input id="theirEmail" name="theirEmail" type="text" size="20" />
-
-                    <input type="submit" />
+                    <div class="formSection">
+                        <label for="yourName">Your name *</label>
+                        <input id="yourName" name="yourName" type="text" size="20" />
+                    </div>
+                    <div class="formSection">
+                        <label for="theirName">Friend's name *</label>
+                        <input id="theirName" name="theirName" type="text" size="20" />
+                    </div>
+                    <div class="formSection">
+                        <label for="theirEmail">Friend's email *</label>
+                        <input id="theirEmail" name="theirEmail" type="text" size="20" />
+                    </div>
+                    <div class="formSection">
+                        <label for="submit"></label>
+                        <input id="submit" type="submit" value="SUBMIT" />
+                    </div>
                 </form>
             </main>
 
