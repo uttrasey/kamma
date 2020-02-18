@@ -1,4 +1,4 @@
-service: kamma
+service: kamma-test
 
 plugins:
   - serverless-iam-roles-per-function
