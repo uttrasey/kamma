@@ -28,7 +28,7 @@
   "devDependencies": {
     "html-minifier": "^4.0.0",
     "husky": "^4.2.1",
-    "serverless": "^1.63.0",
+    "serverless": "^3.25.1",
     "serverless-iam-roles-per-function": "^2.0.2",
     "serverless-pseudo-parameters": "^2.5.0"
   },
